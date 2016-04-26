@@ -19,15 +19,20 @@
 //   optimizer: fis.plugin('png-compressor')
 // });
 // 加 md5
-fis.match('*.{js,css,png}', {
-  useHash: true,
-  url: '/webappdemo/$0'
+fis.hook('relative');
+
+fis.match('**', {
+	relative: true 
+});
+
+fis.match('*.{css,png}', {
+  useHash: true
 });
 
 // 启用 fis-spriter-csssprites 插件
 fis.match('::package', {
   spriter: fis.plugin('csssprites')
-})
+});
 
 // 对 CSS 进行图片合并
 fis.match('*.css', {

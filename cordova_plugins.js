@@ -1,37 +1,44 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
+var whiltelistjspath = __uri('plugins/cordova-plugin-whitelist/whitelist.js');
+var coocaaosapijspath = __uri('plugins/coocaa-plugin-coocaaosapi/www/coocaaosapi.js');
+var dynamicpluginloaderjspath = __uri('plugins/coocaa-plugin-dynamicpluginloader/www/dynamicpluginloader.js');
+var pluginlistconfigjspath = __uri('plugins/coocaa-plugin-dynamicpluginloader/www/pluginlistconfig.js');
+var startappjspath = __uri('plugins/com.lampa.startapp/www/startApp.js');
+var broadcasterjspath = __uri('plugins/cordova-plugin-broadcaster/www/broadcaster.js');
+
 module.exports = [
     {
-        "file": "plugins/cordova-plugin-whitelist/whitelist.js",
+        "file":whiltelistjspath,
         "id": "cordova-plugin-whitelist.whitelist",
         "runs": true
     },
     {
-        "file": "plugins/coocaa-plugin-coocaaosapi/www/coocaaosapi.js",
+        "file": coocaaosapijspath,
         "id": "coocaa-plugin-coocaaosapi.coocaaosapi",
         "clobbers": [
             "coocaaosapi"
         ]
     },
     {
-        "file": "plugins/coocaa-plugin-dynamicpluginloader/www/dynamicpluginloader.js",
+        "file": dynamicpluginloaderjspath,
         "id": "coocaa-plugin-dynamicpluginloader.dynamicpluginloader",
         "clobbers": [
             "dynamicpluginloader"
         ]
     },
     {
-        "file": "plugins/coocaa-plugin-dynamicpluginloader/www/pluginlistconfig.js",
+        "file": pluginlistconfigjspath,
         "id": "coocaa-plugin-dynamicpluginloader.pluginlistconfig",
     },
    {
-        "file": "plugins/com.lampa.startapp/www/startApp.js",
+        "file": startappjspath,
         "id": "com.lampa.startapp.startapp",
         "merges": [
             "navigator.startApp"
             ]
     },
     {
-        "file": "plugins/cordova-plugin-broadcaster/www/broadcaster.js",
+        "file": broadcasterjspath,
         "id": "cordova-plugin-broadcaster.broadcaster",
         "clobbers": [
             "broadcaster"

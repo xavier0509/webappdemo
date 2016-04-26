@@ -20,12 +20,11 @@
 // });
 // 加 md5
 fis.hook('relative');
-
 fis.match('**', {
 	relative: true 
 });
 
-fis.match('*.{css,png}', {
+fis.match('*.{js,css,png}', {
   useHash: true
 });
 
@@ -55,8 +54,10 @@ fis.match('*.png', {
   optimizer: fis.plugin('png-compressor')
 });
 
-fis.media('debug').match('*.{js,css,png}', {
-  useHash: false,
-  useSprite: false,
-  optimizer: null
+fis.match('cordova.js', {
+  useHash: false
 })
+
+// fis.match('*.{js,css,png}',  {
+	// optimizer: null
+// });

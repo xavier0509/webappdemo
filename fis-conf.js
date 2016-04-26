@@ -20,7 +20,8 @@
 // });
 // 加 md5
 fis.match('*.{js,css,png}', {
-  useHash: true
+  useHash: true,
+  url: '/webappdemo/$0'
 });
 
 // 启用 fis-spriter-csssprites 插件
